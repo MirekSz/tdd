@@ -4,6 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
+import pl.altkom.tdd.tictactoe.TicTacToe.GamePlayer;
+import pl.altkom.tdd.tictactoe.TicTacToe.GameState;
+
 public class TicTacToeTest {
 	@Test
 	public void shouldCreateGameWithEmptyFields() throws Exception {
@@ -18,41 +21,71 @@ public class TicTacToeTest {
 	}
 
 	@Test
-	public void shouldSelectSomeSlot() throws Exception {
+	public void playerShouldSelectSomeSlot() throws Exception {
 		// given
 		TicTacToe game = new TicTacToe();
 
 		// when
-		game.takeO(1, 1);
+		game.selectO(1, 1);
 
 		// then
-		assertThat(game.isTaken(1, 1)).isTrue();
+		assertThat(game.isSelected(1, 1)).isTrue();
+	}
+
+	@Test(expected = IllegalStateException.class)
+	public void playerCantSelectAlreadySelectedSlot() throws Exception {
+		// given
+		TicTacToe game = new TicTacToe();
+
+		// when
+		game.selectO(1, 1);
+
+		// then
+		assertThat(game.isSelected(1, 1)).isTrue();
+	}
+
+	@Test(expected = IllegalStateException.class)
+	public void playerCantMakeMoveTwice() throws Exception {
+		// given
+		TicTacToe game = new TicTacToe();
+
+		// when
+		game.selectO(1, 1);
+		game.selectO(2, 1);
+
+		// then
+		assertThat(game.isSelected(1, 1)).isTrue();
+		assertThat(game.isSelected(2, 1)).isTrue();
 	}
 
 	@Test
-	public void shouldWinGameWhenSelectsAllSlotsInRow() throws Exception {
+	public void playersCanSelectSlotsOnChange() throws Exception {
 		// given
 		TicTacToe game = new TicTacToe();
 
 		// when
-		game.takeO(1, 1);
-		game.takeO(2, 1);
-		game.takeO(3, 1);
+		game.selectO(1, 1);
+		game.selectX(2, 1);
+		game.selectO(3, 1);
 
 		// then
-		assertThat(game.getWinner()).isEqualTo("0");
+		assertThat(game.isSelected(1, 1)).isTrue();
+		assertThat(game.isSelected(2, 1)).isTrue();
+		assertThat(game.isSelected(3, 1)).isTrue();
 	}
 
 	@Test
-	public void shouldWinGameWhenSelectAll() throws Exception {
+	public void playerShouldWinGameWhenSelectAllSlotsInLine() throws Exception {
 		// given
 		TicTacToe game = new TicTacToe();
 
 		// when
-		game.takeO(1, 1);
+		game.selectO(1, 1);
+		game.selectO(2, 1);
+		game.selectO(3, 1);
 
 		// then
-		assertThat(game.isTaken(1, 1)).isTrue();
+		assertThat(game.getState()).isEqualTo(GameState.WINNER);
+		assertThat(game.getWinner()).isEqualTo(GamePlayer.O);
 	}
-
 }

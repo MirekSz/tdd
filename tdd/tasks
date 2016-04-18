@@ -2,7 +2,7 @@
 Proste gra robimy moze wspolnie
 
 2. Sale document mokowanie bazy danych repo, wydzielanie
-3. Sale document Payu mokowanie
+3. Sale document Payu mokowanie, spy, mock
 4. Sale document funkcjonalność kursu walut
 5. Kursy walut shortest path
 6. Integracyjne rollback
@@ -17,4 +17,5 @@ Proste gra robimy moze wspolnie
 13. Sonar
 14. given, when, then
 15. should
+16. Events driven
 https://github.com/rgalanakis/tddtraining/blob/master/code/exercise_tdd/ai_requirements.rst
