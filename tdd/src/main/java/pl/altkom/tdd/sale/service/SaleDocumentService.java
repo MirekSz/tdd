@@ -1,10 +1,15 @@
-package pl.altkom.tdd.integration.zad4;
+package pl.altkom.tdd.sale.service;
 
 import java.math.BigDecimal;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
+
+import pl.altkom.tdd.sale.model.SaleDocument;
+import pl.altkom.tdd.sale.model.SaleDocumentItem;
+import pl.altkom.tdd.sale.repo.SaleDocumentItemRepo;
+import pl.altkom.tdd.sale.repo.SaleDocumentRepo;
 
 @Service
 public class SaleDocumentService {

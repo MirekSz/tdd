@@ -1,4 +1,4 @@
-package pl.altkom.tdd.integration.zad4;
+package pl.altkom.tdd.sale.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package pl.altkom.tdd.integration;
+package pl.altkom.tdd;
 
 import org.junit.Ignore;
 import org.junit.runner.RunWith;

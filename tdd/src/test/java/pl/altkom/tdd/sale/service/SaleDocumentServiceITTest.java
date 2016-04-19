@@ -1,4 +1,4 @@
-package pl.altkom.tdd.integration.zad4;
+package pl.altkom.tdd.sale.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.spy;
@@ -14,7 +14,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.test.annotation.DirtiesContext;
 
-import pl.altkom.tdd.integration.BaseIntegrationTest;
+import pl.altkom.tdd.BaseIntegrationTest;
+import pl.altkom.tdd.sale.model.SaleDocument;
+import pl.altkom.tdd.sale.repo.OperationRegistryRepo;
+import pl.altkom.tdd.sale.repo.SaleDocumentRepo;
+import pl.altkom.tdd.sale.service.PromotionService;
+import pl.altkom.tdd.sale.service.SaleDocumentService;
 
 @Configuration
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)

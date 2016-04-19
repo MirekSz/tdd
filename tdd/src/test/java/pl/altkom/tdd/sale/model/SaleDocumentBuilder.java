@@ -1,9 +1,9 @@
-package pl.altkom.tdd.unit.zad2;
+package pl.altkom.tdd.sale.model;
 
 import java.math.BigDecimal;
 
-import pl.altkom.tdd.unit.zad2.SaleDocument;
-import pl.altkom.tdd.unit.zad2.SaleDocumentItem;
+import pl.altkom.tdd.sale.model.SaleDocument;
+import pl.altkom.tdd.sale.model.SaleDocumentItem;
 
 public class SaleDocumentBuilder {
 	private SaleDocument saleDocument;

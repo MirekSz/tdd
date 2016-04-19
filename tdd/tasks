@@ -4,14 +4,14 @@ Proste gra robimy moze wspolnie, wyodrebniamy board
 
 Zad 2. 
 Cel: Przecwiczenie TDD w rzeczywistym przypadku
-Zadanie: W pakiecie zad2 znajduja się klasy SaleDocument oraz SaleDocumentItem. 
+Zadanie: W pakiecie sale znajduja się klasy SaleDocument oraz SaleDocumentItem. 
 		Należy zaimplementowac algorytm wyliczania wartości dokumentu(faktury). 
 		Wartość dokumentu to suma wartosci jego pozycji. 
 		Wartosc pozycji to ilosc x cena
 
 Zad 3. 
 Cel: Wykorzystanie mokowania zależności, zaślepki, uczenie moków, weryfikacja wywołań
-Zadanie: W pakiecie zad3 znajduja się klasy SaleDocumentRepo, SaleDocumentItemRepo oraz SaleDocumentService 
+Zadanie: W pakiecie sale znajduja się klasy SaleDocumentRepo, SaleDocumentItemRepo oraz SaleDocumentService 
 		Należy zaimplementowac algorytm dodania dokumentu do bazy danych. 
 		W tym celu należy stworzyć algorytm w  SaleDocumentService który dla parametru SaleDocument
 		wykonana odpowiednie operacje na SaleDocumentRepo oraz SaleDocumentItemRepo.

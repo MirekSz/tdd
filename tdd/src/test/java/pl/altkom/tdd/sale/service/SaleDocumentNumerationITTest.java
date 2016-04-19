@@ -1,4 +1,4 @@
-package pl.altkom.tdd.integration.zad4;
+package pl.altkom.tdd.sale.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -6,7 +6,12 @@ import javax.inject.Inject;
 
 import org.junit.Test;
 
-import pl.altkom.tdd.integration.BaseIntegrationTest;
+import pl.altkom.tdd.BaseIntegrationTest;
+import pl.altkom.tdd.sale.model.SaleDocument;
+import pl.altkom.tdd.sale.model.SaleDocumentItem;
+import pl.altkom.tdd.sale.repo.OperationRegistryRepo;
+import pl.altkom.tdd.sale.repo.SaleDocumentRepo;
+import pl.altkom.tdd.sale.service.SaleDocumentService;
 
 public class SaleDocumentNumerationITTest extends BaseIntegrationTest {
 

@@ -1,18 +1,27 @@
-package pl.altkom.tdd.unit.zad2;
+package pl.altkom.tdd.sale.model;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class SaleDocument {
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	Long id;
-	String number;
-
+	Integer number;
 	BigDecimal totalValue;
-	private BigDecimal promotion = BigDecimal.ZERO;
 
+	@OneToMany(mappedBy = "saleDocument")
 	List<SaleDocumentItem> items = new ArrayList<SaleDocumentItem>();
+
+	private BigDecimal promotion = BigDecimal.ZERO;
 
 	public Long getId() {
 		return id;
@@ -22,11 +31,11 @@ public class SaleDocument {
 		this.id = id;
 	}
 
-	public String getNumber() {
+	public Integer getNumber() {
 		return number;
 	}
 
-	public void setNumber(String number) {
+	public void setNumber(Integer number) {
 		this.number = number;
 	}
 
@@ -46,11 +55,9 @@ public class SaleDocument {
 		return result.subtract(promotion);
 	}
 
-	public BigDecimal getPromotion() {
-		return promotion;
-	}
-
 	public void setPromotion(BigDecimal promotion) {
 		this.promotion = promotion;
+
 	}
+
 }

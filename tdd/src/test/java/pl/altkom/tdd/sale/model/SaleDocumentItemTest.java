@@ -1,4 +1,4 @@
-package pl.altkom.tdd.unit.zad2;
+package pl.altkom.tdd.sale.model;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
-import pl.altkom.tdd.unit.zad2.SaleDocumentItem;
+import pl.altkom.tdd.sale.model.SaleDocumentItem;
 
 public class SaleDocumentItemTest {
 	@Test

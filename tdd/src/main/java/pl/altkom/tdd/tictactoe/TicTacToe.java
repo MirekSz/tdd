@@ -1,4 +1,4 @@
-package pl.altkom.tdd.unit.tictactoe;
+package pl.altkom.tdd.tictactoe;
 
 public class TicTacToe {
 

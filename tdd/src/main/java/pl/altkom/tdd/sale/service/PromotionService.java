@@ -1,4 +1,4 @@
-package pl.altkom.tdd.integration.zad4;
+package pl.altkom.tdd.sale.service;
 
 import java.math.BigDecimal;
 

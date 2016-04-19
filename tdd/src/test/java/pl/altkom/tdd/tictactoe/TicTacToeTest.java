@@ -1,12 +1,12 @@
-package pl.altkom.tdd.unit.tictactoe;
+package pl.altkom.tdd.tictactoe;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
-import pl.altkom.tdd.unit.tictactoe.TicTacToe;
-import pl.altkom.tdd.unit.tictactoe.TicTacToe.GamePlayer;
-import pl.altkom.tdd.unit.tictactoe.TicTacToe.GameState;
+import pl.altkom.tdd.tictactoe.TicTacToe;
+import pl.altkom.tdd.tictactoe.TicTacToe.GamePlayer;
+import pl.altkom.tdd.tictactoe.TicTacToe.GameState;
 
 public class TicTacToeTest {
 	@Test

@@ -1,4 +1,4 @@
-package pl.altkom.tdd.unit.zad3;
+package pl.altkom.tdd.sale.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Matchers.any;
@@ -17,14 +17,11 @@ import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import pl.altkom.tdd.unit.zad2.SaleDocument;
-import pl.altkom.tdd.unit.zad2.SaleDocumentBuilder;
-import pl.altkom.tdd.unit.zad2.SaleDocumentItem;
-import pl.altkom.tdd.unit.zad3.OperationRegistryService;
-import pl.altkom.tdd.unit.zad3.PromotionService;
-import pl.altkom.tdd.unit.zad3.SaleDocumentItemRepo;
-import pl.altkom.tdd.unit.zad3.SaleDocumentRepo;
-import pl.altkom.tdd.unit.zad3.SaleDocumentService;
+import pl.altkom.tdd.sale.model.SaleDocument;
+import pl.altkom.tdd.sale.model.SaleDocumentBuilder;
+import pl.altkom.tdd.sale.model.SaleDocumentItem;
+import pl.altkom.tdd.sale.repo.SaleDocumentItemRepo;
+import pl.altkom.tdd.sale.repo.SaleDocumentRepo;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SaleDocumentServiceTest {
@@ -109,8 +106,10 @@ public class SaleDocumentServiceTest {
 		service.save(saleDocument);
 
 		// them
-		assertThat(this.service.operationRegistry.getRegistry()).hasSize(1);
-		verify(this.service.operationRegistry).documentAdded(saleDocument);
+		assertThat(this.service.operationRegistryService.getRegistry())
+				.hasSize(1);
+		verify(this.service.operationRegistryService).documentAdded(
+				saleDocument);
 
 	}
 }
