@@ -1,12 +1,42 @@
 1. Gra kółko krzyżyk Hamcrese, AssertJ, Fest
-Proste gra robimy moze wspolnie
+Proste gra robimy moze wspolnie, wyodrebniamy board
+1.1 A co jesli do gry dojdzie regula ze sa uzytkownicy ktorzy moge wykonac dwa ruch pod rzad
 
-2. Sale document mokowanie bazy danych repo, wydzielanie
-3. Sale document Payu mokowanie, spy, mock
-4. Sale document funkcjonalność kursu walut
+Zad 2. 
+Cel: Przecwiczenie TDD w rzeczywistym przypadku
+Zadanie: W pakiecie zad2 znajduja się klasy SaleDocument oraz SaleDocumentItem. 
+		Należy zaimplementowac algorytm wyliczania wartości dokumentu(faktury). 
+		Wartość dokumentu to suma wartosci jego pozycji. 
+		Wartosc pozycji to ilosc x cena
+
+Zad 3. 
+Cel: Wykorzystanie mokowania zależności, zaślepki, uczenie moków, weryfikacja wywołań
+Zadanie: W pakiecie zad3 znajduja się klasy SaleDocumentRepo, SaleDocumentItemRepo oraz SaleDocumentService 
+		Należy zaimplementowac algorytm dodania dokumentu do bazy danych. 
+		W tym celu należy stworzyć algorytm w  SaleDocumentService który dla parametru SaleDocument
+		wykonana odpowiednie operacje na SaleDocumentRepo oraz SaleDocumentItemRepo.
+		
+		SaleDocumentRepo oraz SaleDocumentItemRepo zostaną na produkcji dostarczone przez kontener EJB lub Spring, więc na czas testów trzeba je zamokować
+		
+Dodatkowo 1: Należy stworzyć PromotionService który zwraca kwotę o jaką należy pomniejszych dokument. Wykorzystać obiekt w algorytmie SaleDocumentService gdzie wyliczona wartosc dokumentu pomniejszymy o wartosc upusctu i tak zapiszemy do bazy	
+Dodatkowo 2: Servis OperationRegistryService zapisuje fakkty o wystawionych dokumentach (prosta ArrayList). Wykorzystać obiekt w algorytmie SaleDocumentService
+
+		
+Zad 4 
+Cel: Tworzenie testów integracyjne, baza danych
+Zadanie: W pakiecie zad4 znajduja się klasy z cwiczenia 3 należy ponownie zaimplementować logike dodawania dokumentu sprzedazy tym razem korzystają z bazy danych (bez użycia moków)
+		
+Dodatkowo 1: Należy zaimplementować logikę nadawania numerów dla dokumentów. Numery zaczynają się od jeden, są unikalne	
+Dodatkowo 2: Należy zaimplementować logikę nadawania lp dla pozycji w obrebie dokumentu
+Dodatkowo 3: Wyodrebnic funkcjonalnosc dodawania nowej pozycji do juz istniejącego dokumentu, zrefaktoryzować istniejący kod aby korzystał z nowej funkcjonalnosci
+
+		
+		
+
 5. Kursy walut shortest path
 6. Integracyjne rollback
-7. Integracyjne bean @Primary
+7. Integracyjne bean @Primary, payu
+
 7. Restowe
 7. Pakietowe metody
 8. Selenium
@@ -20,3 +50,4 @@ Proste gra robimy moze wspolnie
 16. Events driven
 17. Prototypowanie nie do testow pierw a pozniej testy
 https://github.com/rgalanakis/tddtraining/blob/master/code/exercise_tdd/ai_requirements.rst
+
